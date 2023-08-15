@@ -1,0 +1,10 @@
+plotly.express
+streamlit 
+seaborn 
+matplotlib.pyplot
+numpy
+pandas
+train_test_split
+LinearRegression
+metrics
+Image

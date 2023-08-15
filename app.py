@@ -1,3 +1,4 @@
+%%writefile app.py
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -9,8 +10,8 @@ import streamlit as st
 from PIL import Image
 
 
-dataset= pd.read_csv('gld_price_data.csv')
-image= Image.open('gold_silver.jpg')
+dataset= pd.read_csv('/content/gld_price_data.csv')
+image= Image.open('/content/gold_silver.jpg')
 st.title("PREDICTION OF GOLD AND SILVER PRICES")
 st.image(image, use_column_width=True)
 Prediction= st.checkbox("Prediction")
@@ -33,6 +34,20 @@ if Data_Analysis:
     st.write(dataset[column].value_counts())
     st.write(dataset[column].value_counts().sum())
 
+
+  st.write("**CORRELATION OF THIS DATASET:** ")
+  corr_matrix = dataset.corr()
+  fig, ax = plt.subplots()
+  sns.heatmap(corr_matrix, annot=True, cmap='coolwarm')
+  st.pyplot(fig)
+
+  correlation = dataset.corr()
+  for column in dataset.columns:
+    if column == "Date":
+      st.write("**Date haven't correlation**")
+    else:
+      st.write("correlation of ",column, ":")
+      st.write(correlation[column])
 
 
   for column in dataset.columns:

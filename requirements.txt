@@ -1,10 +1,6 @@
-plotly.express
+plotly
 streamlit 
 seaborn 
 matplotlib
 numpy
 pandas
-train_test_split
-LinearRegression
-metrics
-Image

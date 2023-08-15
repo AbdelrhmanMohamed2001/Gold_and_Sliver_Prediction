@@ -6,5 +6,4 @@ plotly
 pandas
 joblib
 scikit-learn
-PIL
 Image

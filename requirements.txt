@@ -1,7 +1,7 @@
 plotly.express
 streamlit 
 seaborn 
-matplotlib.pyplot
+matplotlib
 numpy
 pandas
 train_test_split

@@ -1,3 +1,4 @@
+Pillow
 numpy
 streamlit
 seaborn
@@ -6,4 +7,3 @@ plotly
 pandas
 joblib
 scikit-learn
-Image

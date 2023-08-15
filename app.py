@@ -9,8 +9,8 @@ import streamlit as st
 from PIL import Image
 
 
-dataset= pd.read_csv('/content/gld_price_data.csv')
-image= Image.open('/content/gold_silver.jpg')
+dataset= pd.read_csv('gld_price_data.csv')
+image= Image.open('gold_silver.jpg')
 st.title("PREDICTION OF GOLD AND SILVER PRICES")
 st.image(image, use_column_width=True)
 Prediction= st.checkbox("Prediction")

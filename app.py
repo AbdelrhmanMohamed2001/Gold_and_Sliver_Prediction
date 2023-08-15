@@ -34,20 +34,24 @@ if Data_Analysis:
     st.write(dataset[column].value_counts().sum())
 
 
-  st.write("**CORRELATION OF THIS DATASET:** ")
-  corr_matrix = dataset.corr()
+    # Calculate the correlation matrix
+  numeric_df = dataset.select_dtypes(include='number')
+  df_without_na = dataset.dropna()
+  corr_matrix = df_without_na.corr()
+
+  # Create a heatmap of the correlation matrix
   fig, ax = plt.subplots()
   sns.heatmap(corr_matrix, annot=True, cmap='coolwarm')
   st.pyplot(fig)
 
-  correlation = dataset.corr()
+  # Display correlation for each column
+  st.write("**CORRELATION OF THIS DATASET:**")
   for column in dataset.columns:
-    if column == "Date":
-      st.write("**Date haven't correlation**")
-    else:
-      st.write("correlation of ",column, ":")
-      st.write(correlation[column])
-
+      if column == "Date":
+          st.write("**Date doesn't have correlation**")
+      else:
+          st.write("Correlation of", column, ":")
+          st.write(corr_matrix[column])
 
   for column in dataset.columns:
     if column=="Date":

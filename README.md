@@ -19,5 +19,7 @@ Its a Data Science project that predict the price of gold and silver and show al
 Here's a link of video of running:
 
 https://github.com/AbdelrhmanMohamed2001/Gold_and_Sliver_Prediction/blob/main/Gold_Sliver_Prediction.ipynb_Trim.mp4
+
 Here's a link of streamlit app
+
 https://goldandsliverprediction-qvhoanesc8dknpc7nuc9ol.streamlit.app/
